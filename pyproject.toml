@@ -1,0 +1,9 @@
+[project]
+name = "projectmanagersystem"
+version = "0.1.0"
+description = "Create project descriptions, history of changes and next implementation details all from one program."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pyglet>=2.1.14",
+]

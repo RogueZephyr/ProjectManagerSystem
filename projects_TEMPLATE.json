@@ -1,0 +1,21 @@
+{
+  "project-1": {
+    "Title": "TemplateTitle",
+    "Description": "",
+    "Status": ["Done", "In-Progress", "To-Do", "Paused", "Archived"],
+    "Last Updated": "Timestamp",
+    "Next Small Implementation": "Short sentence desribing the next feature to add, or bug to fix.",
+    "Tags": [
+      "Automation",
+      "Web Dev",
+      "CyberSec",
+      "Networking",
+      "Game",
+      "Hack/Cheat"
+    ],
+    "Notes": "Simple consice description or link to external note.",
+    "Progress History": [
+      "Changelog or all previous versions and completed milestones."
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "project-0": {
+    "Title": "Personal Finance Tracker",
+    "Description": "A web app to track expenses, income, and generate monthly reports with charts.",
+    "Status": "In-Progress",
+    "Last Updated": "2026-04-18",
+    "Next Small Implementation": "Add dark mode toggle and improve mobile responsiveness.",
+    "Tags": ["Web Dev", "Automation"],
+    "Notes": "Built with React + Node.js. Data stored in SQLite.",
+    "Progress History": [
+      "2026-03-15: Basic expense logging and summary dashboard completed",
+      "2026-02-28: User authentication implemented",
+      "2026-01-10: Project initialized"
+    ]
+  },
+  "project-1": {
+    "Title": "Discord Music Bot",
+    "Description": "A Discord bot that plays music from YouTube, Spotify, and SoundCloud with queue management.",
+    "Status": "Done",
+    "Last Updated": "2026-04-10",
+    "Next Small Implementation": "None - feature complete",
+    "Tags": ["Automation", "Web Dev"],
+    "Notes": "Using discord.py and yt-dlp. Hosted on a VPS.",
+    "Progress History": [
+      "2026-04-10: Playlist saving and shuffle features added",
+      "2026-03-20: Spotify integration completed",
+      "2026-02-05: Core music playback functionality finished"
+    ]
+  },
+  "project-2": {
+    "Title": "WiFi Pineapple Clone",
+    "Description": "Custom rogue access point for penetration testing with captive portal and deauth attacks.",
+    "Status": "In-Progress",
+    "Last Updated": "2026-04-15",
+    "Next Small Implementation": "Implement automatic handshake capture and upload to Hashcat.",
+    "Tags": ["CyberSec", "Networking"],
+    "Notes": "Running on Raspberry Pi 5 with Kali Linux tools.",
+    "Progress History": [
+      "2026-04-12: Captive portal with fake login page working",
+      "2026-03-25: Basic rogue AP and deauth attack scripts completed"
+    ]
+  },
+  "project-3": {
+    "Title": "2D Platformer Game",
+    "Description": "Simple retro-style platformer with pixel art, enemies, and collectibles.",
+    "Status": "To-Do",
+    "Last Updated": "2026-04-05",
+    "Next Small Implementation": "Create basic player movement and jumping mechanics.",
+    "Tags": ["Game"],
+    "Notes": "Using Godot engine. Planning 5 levels.",
+    "Progress History": [
+      "2026-04-01: Concept art and level design sketches done"
+    ]
+  },
+  "project-4": {
+    "Title": "Automated Backup Script",
+    "Description": "Python script that backs up important folders to cloud storage with encryption and versioning.",
+    "Status": "Done",
+    "Last Updated": "2026-03-28",
+    "Next Small Implementation": "None - stable version deployed",
+    "Tags": ["Automation"],
+    "Notes": "Uses rclone + age encryption. Runs daily via cron.",
+    "Progress History": [
+      "2026-03-28: Added email notification on failure",
+      "2026-03-15: Encryption and cloud sync implemented",
+      "2026-03-01: Initial local backup functionality"
+    ]
+  },
+  "project-5": {
+    "Title": "Valorant Aim Trainer Cheat",
+    "Description": "External aimbot with triggerbot and recoil control for practice in custom games only.",
+    "Status": "Paused",
+    "Last Updated": "2026-04-12",
+    "Next Small Implementation": "Fix detection by Vanguard (for educational use only)",
+    "Tags": ["Hack/Cheat", "Game"],
+    "Notes": "C++ with Windows API. Strictly for offline/training use.",
+    "Progress History": [
+      "2026-04-05: Basic triggerbot and FOV aim assist working",
+      "2026-03-20: Memory reading and overlay implemented"
+    ]
+  },
+  "project-6": {
+    "Title": "Home Network Monitor",
+    "Description": "Dashboard showing all devices on the network, bandwidth usage, and intrusion alerts.",
+    "Status": "In-Progress",
+    "Last Updated": "2026-04-17",
+    "Next Small Implementation": "Add device identification using MAC OUI lookup.",
+    "Tags": ["Networking", "CyberSec", "Web Dev"],
+    "Notes": "Uses Scapy for packet sniffing and Flask backend.",
+    "Progress History": [
+      "2026-04-14: Real-time bandwidth graph working",
+      "2026-04-02: Device discovery and basic dashboard completed"
+    ]
+  },
+  "project-7": {
+    "Title": "AI Meme Generator",
+    "Description": "Web tool that generates memes using local AI models with custom text and templates.",
+    "Status": "To-Do",
+    "Last Updated": "2026-04-16",
+    "Next Small Implementation": "Integrate Stable Diffusion for image generation.",
+    "Tags": ["Web Dev", "Automation"],
+    "Notes": "Frontend in Next.js. Planning to run models with Ollama.",
+    "Progress History": [
+      "2026-04-10: Basic template selection and text overlay UI done"
+    ]
+  },
+  "project-8": {
+    "Title": "Password Manager",
+    "Description": "Lightweight local password manager with AES-256 encryption and TOTP support.",
+    "Status": "Archived",
+    "Last Updated": "2025-12-20",
+    "Next Small Implementation": "None - project archived",
+    "Tags": ["CyberSec"],
+    "Notes": "Written in Rust. Uses SQLite with SQLCipher.",
+    "Progress History": [
+      "2025-12-20: Full encryption and export/import features completed",
+      "2025-11-15: Core vault functionality finished",
+      "2025-10-01: Project started"
+    ]
+  },
+  "project-9": {
+    "Title": "Raspberry Pi Cluster for Distributed Computing",
+    "Description": "5-node Raspberry Pi cluster running Kubernetes for learning distributed systems.",
+    "Status": "Paused",
+    "Last Updated": "2026-03-30",
+    "Next Small Implementation": "Set up persistent storage with Longhorn.",
+    "Tags": ["Networking", "Automation"],
+    "Notes": "Using k3s for lightweight Kubernetes. Planning to run ML workloads.",
+    "Progress History": [
+      "2026-03-15: Basic cluster with 3 nodes operational",
+      "2026-02-28: Networking and node discovery configured"
+    ]
+  }
+}
