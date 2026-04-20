@@ -91,6 +91,7 @@ def main():
     for i, title in enumerate(projectList, 1):
         print(f"{i}. {title}")
 
+    # Type Security for initial choice
     while True:
         try:
             choice = int(input("Choose a Project to view its details: "))
@@ -104,21 +105,27 @@ def main():
 
     print("")
 
+    # Prints the details of the project selected by the user
     selection = selectProject(choice, projectList, projects)
     for key, value in selection[0].items():
         print(f"{key}: {value}")
 
     while running:
+        # Field that will be edited
         edit = input("Enter the key to edit: ")
 
         if edit == "exit":
             running = False
             break
 
+        # Value that will be given to the field chosen above
         change = input("Enter the new value: ")
         key = selection[1]
+
+        # Updates the json file with the new value
         editProject(projects, key, edit, change, file)
 
+        # Fetches and prints all the new data
         selection = selectProject(choice, projectList, projects)
         for key, value in selection[0].items():
             print(f"{key}: {value}")
