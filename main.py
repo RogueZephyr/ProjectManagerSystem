@@ -91,7 +91,17 @@ def main():
     for i, title in enumerate(projectList, 1):
         print(f"{i}. {title}")
 
-    choice = int(input("Choose a Project to view its details: "))
+    while True:
+        try:
+            choice = int(input("Choose a Project to view its details: "))
+        except ValueError:
+            print("Invalid choice.")
+            continue
+        if choice < 1 or choice > len(projectList):
+            print("Invalid choice.")
+        else:
+            break
+
     print("")
 
     selection = selectProject(choice, projectList, projects)
