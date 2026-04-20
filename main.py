@@ -1,7 +1,5 @@
 import json
 
-debug = False
-
 
 def loadJson(filename):
     with open(filename, "r") as file:
@@ -10,18 +8,16 @@ def loadJson(filename):
 
 def listProjects(projects):
     projectList = []
-
     for project in projects:
         title = projects[project]["Title"]
         projectList.append(title)
-
     return projectList
 
 
 def selectProject(
     choice, projectsList, projects
 ):  # Prints a Menu for the users chosen project
-    key = f"project-{choice}"
+    key = f"project-{choice - 1}"
     project = projects[key]
 
     projectDetails = {
@@ -36,18 +32,38 @@ def selectProject(
         "progress_history": project["Progress History"],
     }
 
-    return projectDetails
+    return projectDetails, key
 
 
 def editProject(
-    projectDetails, key, change
+    projects, key, edit, change, file
 ):  # edit a item in the json depending on the users input
-    projectDetails[key] = change
-    return projectDetails
+    match edit:
+        case "title":
+            projects[key]["Title"] = change
+        case "desc":
+            projects[key]["Description"] = change
+        case "status":
+            projects[key]["Status"] = change
+        case "nextStep":
+            projects[key]["Next Small Implementation"] = change
+        case "tags":
+            projects[key]["Tags"] = change
+        case "notes":
+            projects[key]["Notes"] = change
+        case "changelog":
+            projects[key]["Progress History"] = change
+        case _:
+            print("Invalid key.")
 
-def updateFile(file): # Update the file then close
-    
+    updateFile(file, projects)
+
+
+def updateFile(file, projects):  # Update the file then close
+    with open(file, "w") as f:
+        json.dump(projects, f, indent=4)
     return
+
 
 def deleteProject():
     # Moves a project from the Json file to a temporary archive
@@ -62,21 +78,24 @@ def createProject():
 def main():
     running = True
     print("Welcome to the Project Manager.")
-
     file = "projects_Sample.json"
-    projects = loadJson(file)
-    if projects == None:
-        print("project failed to load!")
+
+    try:
+        projects = loadJson(file)
+    except Exception as e:
+        print(f"Failed to load {file}: {e}")
+        return
+
     print(f"Loaded {file}\n")
     projectList = listProjects(projects)
     for i, title in enumerate(projectList, 1):
         print(f"{i}. {title}")
 
-    choice = 1 - int(input("Choose a Project to view its details: "))
+    choice = int(input("Choose a Project to view its details: "))
     print("")
 
     selection = selectProject(choice, projectList, projects)
-    for key, value in selection.items():
+    for key, value in selection[0].items():
         print(f"{key}: {value}")
 
     while running:
@@ -84,12 +103,14 @@ def main():
 
         if edit == "exit":
             running = False
-            with open(file, "w") as update:
-                json.dump(projects, update)
             break
+
         change = input("Enter the new value: ")
-        editProject(selection, edit, change)
-        for key, value in selection.items():
+        key = selection[1]
+        editProject(projects, key, edit, change, file)
+
+        selection = selectProject(choice, projectList, projects)
+        for key, value in selection[0].items():
             print(f"{key}: {value}")
 
 
